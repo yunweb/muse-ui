@@ -5,19 +5,19 @@
       <text-field-label v-if="label" :float="float" :focus="isFocused" :normalClass="labelClass" :focusClass="labelFocusClass">{{label}}</text-field-label>
       <text-field-hint v-if="hintText" :text="hintText" :show="showHint" :class="hintTextClass"></text-field-hint>
       <slot>
-        <input v-if="!multiLine" ref="input" :name="name" :type="type" :value="inputValue"
+        <input v-if="!multiLine && maxLength" ref="input" :name="name" :type="type" :value="inputValue"
+          :disabled="disabled" @change="handleChange" @focus="handleFocus" @input="handleInput" @blur="handleBlur"
+          :max="max" :min="min" class="mu-text-field-input" :class="inputClass" :required="required" :maxlength="maxLength">
+        <input v-else-if="!multiLine && !maxLength" ref="input" :name="name" :type="type" :value="inputValue"
           :disabled="disabled" @change="handleChange" @focus="handleFocus" @input="handleInput" @blur="handleBlur"
           :max="max" :min="min" class="mu-text-field-input" :class="inputClass" :required="required">
-        <enhanced-textarea :name="name" v-if="multiLine" ref="textarea" :normalClass="inputClass":value="inputValue" :disabled="disabled" :rows="rows" :rowsMax="rowsMax" @change="handleChange" @input="handleInput" @focus="handleFocus" @blur="handleBlur"></enhanced-textarea>
+        <enhanced-textarea :name="name" v-if="multiLine" ref="textarea" :normalClass="inputClass" :value="inputValue" :disabled="disabled" :rows="rows" :rowsMax="rowsMax" @change="handleChange" @input="handleInput" @focus="handleFocus" @blur="handleBlur"></enhanced-textarea>
       </slot>
       <underline v-if="underlineShow" :error="!!errorText" :disabled="disabled"
       :errorColor="errorColor" :focus="isFocused" :normalClass="underlineClass" :focusClass="underlineFocusClass"/>
-      <div class="mu-text-field-help" :class="helpTextClass" :style="errorStyle" v-if="errorText || helpText || maxLength > 0">
+      <div class="mu-text-field-help" :class="helpTextClass" :style="errorStyle" v-if="errorText || helpText">
           <div>
               {{errorText || helpText}}
-          </div>
-          <div v-if="maxLength > 0">
-              {{charLength}}/{{maxLength}}
           </div>
       </div>
     </div>

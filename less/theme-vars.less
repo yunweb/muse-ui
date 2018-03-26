@@ -60,15 +60,18 @@
 @dialogBodyColor: fade(@textColor, 60%);;
 @dialogColor: @dialogBackgroundColor;
 
-@dropDownMenuTextColor: @textColor;
-@dropDownMenuIconColor: @borderColor;
-@dropDownMenuLineColor: @borderColor;
-
 // flatButton
 @flatButtonColor: transparent;
 @flatButtonTextColor: @textColor;
 @flatButtonPrimaryTextColor: @primaryColor;
 @flatButtonSecondaryTextColor: @accentColor;
+
+@dropDownMenuTextColor: @textColor;
+@dropDownMenuIconColor: @borderColor;
+@dropDownMenuLineColor: @borderColor;
+
+@gridListTextColor: @white;
+@gridListTitlebarColor: rgba(0, 0, 0, 0.4);
 
 // floatButton
 @floatButtonColor: @primaryColor;
@@ -77,9 +80,6 @@
 @floatButtonSecondaryIconColor: @alternateTextColor;
 @floatButtonDisabledColor: darken(@alternateTextColor, 12%);
 @floatButtonDisabledIconColor: fade(@textColor, 30%);
-
-@gridListTextColor: @white;
-@gridListTitlebarColor: rgba(0, 0, 0, 0.4);
 
 // iconButton
 @iconButtonPrimaryColor: @primaryColor;
@@ -160,6 +160,14 @@
 // subHeader
 @subHeaderColor: @secondaryTextColor;
 
+@tableBackgroundColor: @alternateTextColor;
+@tableBorderColor: @borderColor;
+@tableTextColor: @textColor;
+@tableRowSelectedBackgroundColor: @grey100;
+@tableRowHoverBackgroundColor: @grey200;
+@tableRowStripeBackgroundColor: fade(lighten(@primaryColor, 50%), 40%);
+@tableTheadTextColor: @secondaryTextColor;
+
 @switchThumbOnColor: @primaryColor;
 @switchThumbOffColor: @darkerAccentColor;
 @switchThumbDisabledColor: @grey300;
@@ -168,14 +176,6 @@
 @switchTrackDisabledColor: @lighterPrimaryColor;
 @switchTextColor: @textColor;
 @switchTextDisabledColor: @disabledColor;
-
-@tableBackgroundColor: @alternateTextColor;
-@tableBorderColor: @borderColor;
-@tableTextColor: @textColor;
-@tableRowSelectedBackgroundColor: @grey100;
-@tableRowHoverBackgroundColor: @grey200;
-@tableRowStripeBackgroundColor: fade(lighten(@primaryColor, 50%), 40%);
-@tableTheadTextColor: @secondaryTextColor;
 
 @tabsBackgroundColor: @primaryColor;
 @tabsLineColor: @accentColor;

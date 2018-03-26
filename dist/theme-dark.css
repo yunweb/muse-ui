@@ -6,6 +6,14 @@
   color: #303030;
   background-color: #727272;
 }
+body {
+  background-color: #303030;
+  color: #ffffff;
+  font-family: Roboto, Lato, sans-serif;
+}
+a {
+  color: #ff4081;
+}
 .mu-badge {
   background-color: #757575;
   color: #303030;
@@ -17,14 +25,6 @@
 .mu-badge-secondary {
   background-color: #ff4081;
   color: #303030;
-}
-body {
-  background-color: #303030;
-  color: #ffffff;
-  font-family: Roboto, Lato, sans-serif;
-}
-a {
-  color: #ff4081;
 }
 .mu-bottom-nav {
   background-color: #424242;
@@ -53,6 +53,30 @@ a {
 .mu-bottom-sheet {
   background-color: #424242;
 }
+.mu-checkbox input[type="checkbox"]:checked + .mu-checkbox-wrapper .mu-checkbox-icon-uncheck {
+  color: #1976d2;
+}
+.mu-checkbox input[type="checkbox"]:checked + .mu-checkbox-wrapper .mu-checkbox-ripple-wrapper {
+  color: #1976d2;
+}
+.mu-checkbox-label {
+  color: #ffffff;
+}
+.mu-checkbox.disabled .mu-checkbox-label {
+  color: rgba(255, 255, 255, 0.3);
+}
+.mu-checkbox-icon-uncheck {
+  color: #ffffff;
+}
+.mu-checkbox.disabled .mu-checkbox-icon-uncheck {
+  color: rgba(255, 255, 255, 0.3);
+}
+.mu-checkbox-icon-checked {
+  color: #1976d2;
+}
+.mu-checkbox.disabled .mu-checkbox-icon-checked {
+  color: rgba(255, 255, 255, 0.3);
+}
 .mu-card {
   background-color: #303030;
 }
@@ -79,30 +103,6 @@ a {
 }
 .mu-card-text {
   color: #ffffff;
-}
-.mu-checkbox input[type="checkbox"]:checked + .mu-checkbox-wrapper .mu-checkbox-icon-uncheck {
-  color: #1976d2;
-}
-.mu-checkbox input[type="checkbox"]:checked + .mu-checkbox-wrapper .mu-checkbox-ripple-wrapper {
-  color: #1976d2;
-}
-.mu-checkbox-label {
-  color: #ffffff;
-}
-.mu-checkbox.disabled .mu-checkbox-label {
-  color: rgba(255, 255, 255, 0.3);
-}
-.mu-checkbox-icon-uncheck {
-  color: #ffffff;
-}
-.mu-checkbox.disabled .mu-checkbox-icon-uncheck {
-  color: rgba(255, 255, 255, 0.3);
-}
-.mu-checkbox-icon-checked {
-  color: #1976d2;
-}
-.mu-checkbox.disabled .mu-checkbox-icon-checked {
-  color: rgba(255, 255, 255, 0.3);
 }
 .mu-chip {
   background-color: #4f4f4f;
@@ -168,15 +168,6 @@ a {
 .mu-dialog-body {
   color: rgba(255, 255, 255, 0.6);
 }
-.mu-dropDown-menu-text {
-  color: #ffffff;
-}
-.mu-dropDown-menu-icon {
-  color: rgba(255, 255, 255, 0.3);
-}
-.mu-dropDown-menu-line {
-  background-color: rgba(255, 255, 255, 0.3);
-}
 .mu-flat-button {
   color: #ffffff;
   background-color: transparent;
@@ -189,6 +180,15 @@ a {
 }
 .mu-flat-button-secondary {
   color: #ff4081;
+}
+.mu-dropDown-menu-text {
+  color: #ffffff;
+}
+.mu-dropDown-menu-icon {
+  color: rgba(255, 255, 255, 0.3);
+}
+.mu-dropDown-menu-line {
+  background-color: rgba(255, 255, 255, 0.3);
 }
 .mu-float-button {
   background-color: #1976d2;
@@ -215,6 +215,12 @@ a {
 }
 .mu-grid-tile-action .mu-icon {
   color: #ffffff;
+}
+.mu-icon-button-primary {
+  color: #1976d2;
+}
+.mu-icon-button-secondary {
+  color: #ff4081;
 }
 .mu-circle-spinner {
   border-color: #1976d2;
